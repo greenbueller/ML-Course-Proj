@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Env
+.venv/
+venv/
+
+# Cache
+.cache/
+data/**/*.jpg
+data/**/*.jpeg
+data/**/*.png
+data/**/*.gif
+data/**/*.webp
+
+# Kaggle
+kaggle.json
+
+# Environment
+.env
+
+# Mac File
+.dlstore
+
+# IDEs
+.idea/
+.vscode/
