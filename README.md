@@ -6,9 +6,8 @@ To install, first clone the repo.
 1. Navigate to where you would like to store the file
 2. Open your terminal
 3. In the terminal type `git clone https://github.com/greenbueller/ML-Course-Proj.git`
-4. Next, create a copy of .env.example as .env
-5. Fill in your .env with the appropriate fields
-6. Run `pip install -r requirements.txt`
+4. Run `pip install -r requirements.txt`
+5. When running the Kaggle datasets, get a legacy API file and store it as `local user directory/.kaggle/kaggle.json`
 
 All of the necessary components should now be ready.
 

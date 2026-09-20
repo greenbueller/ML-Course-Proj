@@ -84,8 +84,6 @@ def download_dataset(dataset_id: str) -> None:
         print(f"Location: {destination}")
         return
     
-    destination.mkdir(parents=True, exist_ok=True)
-
     print(f"\nDownloading: {dataset_info['name']}")
     print(f"Destination: {destination}\n")
 

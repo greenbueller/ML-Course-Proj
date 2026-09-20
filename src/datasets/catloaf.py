@@ -16,9 +16,10 @@ def download(destination: Path) -> None:
 
     print(f"Downloading dataset '{DATASET_ID}' to '{destination}'...")
 
-    api.dataset.download_files(
+    api.dataset_download_files(
         DATASET_ID,
         path=str(destination),
+        quiet=False,
         unzip=True,
     )
 

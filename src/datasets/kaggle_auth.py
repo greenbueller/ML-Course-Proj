@@ -10,10 +10,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 from kaggle.api.kaggle_api_extended import KaggleApi
 
-PROJECT_ROOT = Path(__file__).parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
 ENV_FILE = PROJECT_ROOT / ".env"
 
-def get_kaggle_api() -> KaggleAPI:
+def get_kaggle_api() -> KaggleApi:
     "Load Kaggle credentials and return authenticated Kaggle API instance."
 
     load_dotenv(ENV_FILE)

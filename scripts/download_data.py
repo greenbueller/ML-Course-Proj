@@ -65,27 +65,25 @@ def main() -> None:
                 print(f"\nERROR downloading {dataset_id}:")
                 print(e)
                 sys.exit(1)
-        
+
         print("All datasets downloaded successfully.")
         return
 
-        # Download a specific dataset
+    if command not in DATASETS:
+        print(f"Unknown dataset: {command}.")
+        print_usage()
+        sys.exit(1)
 
-        if command not in DATASETS:
-            print(f"Unknown dataset: {command}.")
-            print_usage()
-            sys.exit(1)
-        
-        try:
-            path = download_dataset(command)
+    try:
+        path = download_dataset(command)
 
-            print("\nDataset is ready.")
-            print(f"Local path: {path}")
+        print("\nDataset is ready.")
+        print(f"Local path: {path}")
 
-        except Exception as e:
-            print("\nERROR:")
-            print(e)
-            sys.exit(1)
+    except Exception as e:
+        print("\nERROR:")
+        print(e)
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
