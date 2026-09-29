@@ -53,6 +53,21 @@ def get_dataset_path(dataset_id: str) -> Path:
     
     return CACHE_DIR / DATASETS[dataset_id]["directory"]
 
+def get_dataset(dataset_id: str) ->  Path:
+    """Return a downloaded dataset path without downloading"""
+
+    """NOTE: THIS IS WHAT SHOULD BE PASSED TO MODEL"""
+
+    path = get_dataset_path(dataset_id)
+
+    if not is_downloaded(dataset_id):
+        raise FileNotFoundError(
+            f"Dataset '{dataset_id}' is not downloaded. "
+            f"Please download it first using download_dataset('{dataset_id}')"
+        )
+
+    return path
+
 def is_downloaded(dataset_id: str) -> bool:
     """
     Check if the dataset is cached

@@ -7,7 +7,7 @@ To install, first clone the repo.
 2. Open your terminal
 3. In the terminal type `git clone https://github.com/greenbueller/ML-Course-Proj.git`
 4. Run `pip install -r requirements.txt`
-5. When running the Kaggle datasets, get a legacy API file and store it as `local user directory/.kaggle/kaggle.json`
+5. When running the Kaggle datasets, get a legacy API file and store it as `[local user directory]/.kaggle/kaggle.json`
 
 All of the necessary components should now be ready.
 
