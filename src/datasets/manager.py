@@ -2,6 +2,8 @@ from pathlib import Path
 from . import catloaf
 from . import breeds
 from . import cats
+import os
+import stat
 
 # Cache Config
 
@@ -108,6 +110,11 @@ def download_dataset(dataset_id: str) -> None:
 
     return destination
 
+def _remove_readonly(func, path, _):
+    """Allow shutil.rmtree to remove read-only files on Windows"""
+    os.chmod(path, stat.S_IWRITE)
+    func(path)
+
 def remove_dataset(dataset_id: str) -> None:
     """
     Remove a dataset from the cache
@@ -130,7 +137,7 @@ def remove_dataset(dataset_id: str) -> None:
 
     print(f"Removing: {destination}")
 
-    shutil.rmtree(destination)
+    shutil.rmtree(destination, onerror=_remove_readonly)
 
     print("Dataset removed from local cache.")
 
@@ -147,6 +154,6 @@ def remove_all_datasets() -> None:
 
     print(f"Removing all datasets from: {CACHE_DIR}")
 
-    shutil.rmtree(CACHE_DIR)
+    shutil.rmtree(CACHE_DIR, onerror=_remove_readonly)
 
     print("All datasets removed from local cache.")

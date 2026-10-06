@@ -1,9 +1,9 @@
 from pathlib import Path
 import subprocess
 
-REPO = "https://github.com/atharvataras/cat-breeds-dataset.git"
+REPO = "https://github.com/n-smith-public/Cat-Breeds-Loafing.git"
 
-COMMIT = "56a6905"
+COMMIT = "55da393"
 
 def download(destination: Path) -> None:
     """

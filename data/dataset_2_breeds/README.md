@@ -1,4 +1,6 @@
 Dataset: Cat Breeds Dataset
 Source: Github
-Owner: AtharvaTaras
-Git identifier: atharvatras/cat-breeds-dataset
+Fork from: AtharvaTaras
+Fork Origin: atharvatras/cat-breeds-dataset
+Owner: n-smith-public
+Git identifier: n-smith-public/Cat-Breeds-Loafing
