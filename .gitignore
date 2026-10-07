@@ -14,6 +14,9 @@ data/**/*.png
 data/**/*.gif
 data/**/*.webp
 
+# Models
+models/
+
 # Kaggle
 kaggle.json
 
@@ -27,4 +30,6 @@ kaggle.json
 .idea/
 .vscode/
 
+# AI Tools
+results.md
 train-local.py

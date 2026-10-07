@@ -157,3 +157,22 @@ def remove_all_datasets() -> None:
     shutil.rmtree(CACHE_DIR, onerror=_remove_readonly)
 
     print("All datasets removed from local cache.")
+
+def remove_models() -> None:
+    """
+    Remove all models from the models directory
+    """
+
+    import shutil
+
+    models_dir = Path(__file__).parent.parent / "models"
+
+    if not models_dir.exists():
+        print("No models are currently saved.")
+        return
+
+    print(f"Removing all models from: {models_dir}")
+
+    shutil.rmtree(models_dir, onerror=_remove_readonly)
+
+    print("All models removed from local cache.")

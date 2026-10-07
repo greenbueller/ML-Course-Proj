@@ -2,5 +2,4 @@ kaggle
 opencv-python
 numpy
 pandas
-torch
 scikit-learn
